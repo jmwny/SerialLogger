@@ -2,53 +2,96 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h2>Environmental Sensor Project @ {{ time }} </h2>
+<div class="container-fluid">
+
+    <div class="card text-dark bg-info mb-3">
+        <div class="card-body">
+            <h6 class="card-title">Sensor Monitor</h6>
+            <h2 class="card-text">{{ time }}</h2>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Temperature</h6>
+            <h2 class="card-text">{{ tempf }} &#8457</h2>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Humidity</h6>
+            <h2 class="card-text">{{ humidity }}% RH</h2>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Pressure</h6>
+            <h2 class="card-text">{{ pressure }} inHg</h2>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">eCO2</h6>
+            <h2 class="card-text">{{ eco2 }} ppm</h2>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">TVOC</h6>
+            <h2 class="card-text">{{ tvoc }} ppb</h2>
+        </div>
+    </div>
+
+    <div class="card text-dark bg-info mb-3">
+        <div class="card-body">
+            <h6 class="card-title">Last Hour</h6>
+            <h2 class="card-text">Historical Data</h2>
+        </div>
+    </div>
+
+    <!--- One Hour History, Low Temp, High Temp, Low Humidity, High Humidity-->
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Temperature</h6>
+            <h4 class="card-text">Low: {{ tlow }} &#8457<br />High: {{ thigh }} &#8457</h4>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Humidity</h6>
+            <h4 class="card-text">Low: {{ hlow }}<br />High: {{ hhigh }} </h4>
+        </div>
+    </div>
+
+    <!--- 6 Hour History, Low Temp, High Temp, Low Humidity, High Humidity-->
+
+    <div class="card text-dark bg-info mb-3">
+        <div class="card-body">
+            <h6 class="card-title">Last 6 Hours</h6>
+            <h2 class="card-text">Historical Data</h2>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Temperature</h6>
+            <h4 class="card-text">Low: {{ tlow2 }} &#8457<br />High: {{ thigh2 }} &#8457</h4>
+        </div>
+    </div>
+
+    <div class="card text-white bg-primary mb-3 mx-auto" style="width: 12rem;">
+        <div class="card-body">
+            <h6 class="card-title">Humidity</h6>
+            <h4 class="card-text">Low: {{ hlow2 }}<br />High: {{ hhigh2 }} </h4>
+        </div>
+    </div>
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h3>Temperature</h3>
-        <p>
-            <h4>
-                {{ tempc }} &#8451; -
-                {{ tempf }} &#8457;
-            </h4>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Pressure</h2>
-        <p>
-            <h4>
-                {{ pressure }} inHg
-            </h4>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Humidity</h2>
-        <p>
-            <h4>
-                {{ humidity }} %
-            </h4>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>eCO2</h2>
-        <p>
-            <h4>
-                {{ eco2 }} ppm
-            </h4>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>TVOC</h2>
-        <p>
-            <h4>
-                {{ tvoc }} ppb
-            </h4>
-        </p>
-    </div>
-
-</div>
-
-{% endblock %}
+    {% endblock %}
