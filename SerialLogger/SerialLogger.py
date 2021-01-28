@@ -50,7 +50,7 @@ def main():
         print(" - Creating table if needed");
         create_table(conn)
         # Read serial port and log
-        with serial.Serial('COM3', 115200) as ser:
+        with serial.Serial('COM4', 115200) as ser:
             print(" - Opening serial port and logging");
             while True:
                 line = ser.readline().strip()   # read a '\n' terminated line
