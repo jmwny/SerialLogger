@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\John\Documents\GitHub\SerialLogger\FlaskSensor\env"
+VIRTUAL_ENV="C:\Users\John\OneDrive\GitHub\SerialLogger\FlaskSensor\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

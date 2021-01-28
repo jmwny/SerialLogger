@@ -8,7 +8,7 @@ from FlaskSensor import app
 import sqlite3
 from flask import g
 
-DATABASE = r"C:\\Users\\John\\Documents\\GitHub\\SerialLogger\\SerialLogger\\SensorLog.db"
+DATABASE = r"C:\Users\John\OneDrive\GitHub\SerialLogger\SerialLogger\SensorLog.db"
 
 def get_db():
     db = getattr(g, '_database', None)
