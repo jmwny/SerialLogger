@@ -41,6 +41,7 @@
     <Folder Include="FlaskSensor\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlaskSensor\static\content\index.png" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskSensor\static\content\bootstrap.css" />
     <Content Include="FlaskSensor\static\content\bootstrap.min.css" />

@@ -20,8 +20,8 @@ def create_table(conn):
                                     tempf text,
                                     pressure text,
                                     humidity text,
-                                    eco2 text,
-                                    tvoc text
+                                    vocraw text,
+                                    vocindex text
                                     ); """
 
     try:
@@ -32,7 +32,7 @@ def create_table(conn):
 
 
 def insert_data(conn, vars):
-    sql = ''' INSERT INTO env(tempc,tempf,pressure,humidity,eco2,tvoc)
+    sql = ''' INSERT INTO env(tempc,tempf,pressure,humidity,vocraw,vocindex)
               VALUES(?,?,?,?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, vars)
@@ -50,7 +50,7 @@ def main():
         print(" - Creating table if needed");
         create_table(conn)
         # Read serial port and log
-        with serial.Serial('COM4', 115200) as ser:
+        with serial.Serial('COM5', 115200) as ser:
             print(" - Opening serial port and logging");
             while True:
                 line = ser.readline().strip()   # read a '\n' terminated line
